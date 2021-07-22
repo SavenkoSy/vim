@@ -47,6 +47,9 @@ Plug 'vim-scripts/EasyGrep'
 Plug 'vim-scripts/Toggle' " <S-+> – true -> false, positive -> negative etc.
 Plug 'vim-scripts/surround.vim' " Press cs"' (double quote -> single quote) inside
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-rbenv'
+Plug 'tpope/vim-bundler'
 
 " Other
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -130,6 +133,8 @@ inoremap <C-Down>  <Esc>:tabnext<CR>i
 inoremap <C-t>     <Esc>:tabnew<CR>
 inoremap <C-e>     <Esc>:q!<CR>i
 
+" netrw
+nnoremap <C-k> :Vexplore <CR>
 
 " ALE
 let g:ale_fix_on_save = 1
@@ -200,6 +205,12 @@ map cp "+y<CR>
 " C Prerequirements
 set exrc
 set secure
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+" map <Leader>s :call RunNearestSpec()<CR>
+" map <Leader>l :call RunLastSpec()<CR>
+" map <Leader>a :call RunAllSpecs()<CR>
 
 
 " RU
