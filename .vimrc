@@ -135,6 +135,8 @@ inoremap <C-e>     <Esc>:q!<CR>i
 
 " netrw
 nnoremap <C-k> :Vexplore <CR>
+" nmap <F6> :NERDTreeToggle<CR>
+
 
 " ALE
 let g:ale_fix_on_save = 1
