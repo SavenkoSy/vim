@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 " Syntax
 Plug 'kchmck/vim-coffee-script'
 Plug 'slim-template/vim-slim'
+Plug 'yuezk/vim-js'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'chase/vim-ansible-yaml'
@@ -19,10 +20,14 @@ Plug 'p0deje/vim-ruby-interpolation'
 Plug 'vim-scripts/rainbow-end'
 Plug 'w0rp/ale'
 Plug 'rhysd/vim-crystal'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'branch': 'release/0.x'
+  \ }
 
 " Styles
 Plug 'ryanoasis/vim-webdevicons'
-Plug 'blueyed/vim-diminactive'
+" Plug 'blueyed/vim-diminactive'
 Plug 'mhinz/vim-startify' " Start screen
 
 " Bottom line
@@ -137,6 +142,7 @@ inoremap <C-e>     <Esc>:q!<CR>i
 nnoremap <C-k> :Vexplore <CR>
 " nmap <F6> :NERDTreeToggle<CR>
 
+let mapleader = " "
 
 " ALE
 let g:ale_fix_on_save = 1
@@ -213,77 +219,6 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 " map <Leader>s :call RunNearestSpec()<CR>
 " map <Leader>l :call RunLastSpec()<CR>
 " map <Leader>a :call RunAllSpecs()<CR>
-
-
-" RU
-map ё `
-map й q
-map ц w
-map у e
-map к r
-map е t
-map н y
-map г u
-map ш i
-map щ o
-map з p
-map х [
-map ъ ]
-map ф a
-map ы s
-map в d
-map а f
-map п g
-map р h
-map о j
-map л k
-map д l
-map ж ;
-map э '
-map я z
-map ч x
-map с c
-map м v
-map и b
-map т n
-map ь m
-map б ,
-map ю .
-map . /
-map Ё ~
-map Й Q
-map Ц W
-map У E
-map К R
-map Е T
-map Н Y
-map Г U
-map Ш I
-map Щ O
-map З P
-map Х {
-map Ъ }
-map Ф A
-map Ы S
-map В D
-map А F
-map П G
-map Р H
-map О J
-map Л K
-map Д L
-map Ж :
-map Э "
-map Я Z
-map Ч X
-map С C
-map М V
-map И B
-map Т N
-map Ь M
-map Б <
-map Ю >
-map , ?
 
 autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
 
